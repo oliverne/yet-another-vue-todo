@@ -5,7 +5,7 @@
   "scripts": {
     "start": "echo \"Please run 'yarn dev' after 'yarn install'\"",
     "dev": "parcel public/index.html -p 8000",
-    "build": "parcel build public/index.html"
+    "build": "parcel build public/index.html --public-url ./"
   },
   "dependencies": {
     "consola": "2.11.3",
