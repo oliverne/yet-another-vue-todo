@@ -2,17 +2,13 @@
   <div>
     <h1>About</h1>
     <p>
-      blah...
+      Not yet!
     </p>
   </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
-<style>
-
-</style>
+<style></style>

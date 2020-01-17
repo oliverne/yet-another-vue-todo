@@ -1,31 +1,39 @@
 <template>
-  <div>
-    <div class="field has-addons has-addons-centered">
-      <p class="control">
-        <input
-          :disabled="isLoading"
-          class="input"
-          type="text"
-          v-model="newTodo"
-          @keyup.enter="addTodo"
-        >
-      </p>
-      <p class="control">
-        <button
-          :class="{'is-loading': isLoading}"
-          :disabled="isLoading"
-          class="button is-link"
-          @click="addTodo"
-        >ENTER</button>
-      </p>
+  <div class="columns">
+    <div class="column is-hidden-mobile"></div>
+    <div class="column is-half">
+      <div class="field has-addons">
+        <p class="control has-icons-left is-expanded">
+          <input
+            type="text"
+            class="input"
+            placeholder="What are you going to do?"
+            v-model="newTodo"
+            :disabled="loading"
+            @keyup.enter="addTodo"
+          />
+          <span class="icon is-small is-left"><i class="fa fa-check"></i></span>
+        </p>
+        <p class="control">
+          <button
+            :class="{ 'is-loading': loading }"
+            :disabled="loading"
+            class="button is-primary"
+            @click="addTodo"
+          >
+            Enter
+          </button>
+        </p>
+      </div>
     </div>
+    <div class="column is-hidden-mobile"></div>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    isLoading: {
+    loading: {
       type: Boolean,
       default: false
     }
@@ -40,7 +48,6 @@ export default {
       if (!this.newTodo.trim()) {
         return
       }
-      console.log(this.newTodo + ' added')
       this.$emit('newTodoAdded', this.newTodo)
       this.newTodo = ''
     }
@@ -48,5 +55,4 @@ export default {
 }
 </script>
 
-<style>
-</style>
+<style></style>

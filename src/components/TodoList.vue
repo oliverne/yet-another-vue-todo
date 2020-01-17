@@ -1,47 +1,34 @@
 <template>
-  <div class="content">
-    <h3 class="title is-5">{{icon}} {{title}}</h3>
+  <div class="todo-list">
+    <h3 class="title is-5">{{ icon }} {{ title }}</h3>
+
     <div v-if="!data || data.length < 1">
-      Loading...
+      Nothing. Yeh!
     </div>
-    <ul v-else>
-      <li v-for="todo in data" :key="todo.id">
-        <todo
-          @todoCompleted="completeTodo"
-          @todoRemoved="removeTodo"
-          :title="todo.title"
-          :id="todo.id"
-          :completed="todo.completed"
-        />
-      </li>
-    </ul>
+
+    <div v-else>
+      <todo-item
+        v-for="item in data"
+        :key="item.id"
+        :id="item.id"
+        :title="item.title"
+        :completed="item.completed"
+        @todoToggled="$emit('todoToggled', item.id)"
+        @todoRemoved="$emit('todoRemoved', item.id)"
+      ></todo-item>
+    </div>
   </div>
 </template>
 
 <script>
-import Todo from './Todo.vue'
+import TodoItem from './TodoItem.vue'
 
 export default {
   props: ['icon', 'title', 'data'],
   components: {
-    Todo
-  },
-  methods: {
-    completeTodo(id) {
-      console.log('will done', id)
-      this.$emit('todoCompleted', id)
-    },
-    removeTodo(id) {
-      this.$emit('todoRemoved', id)
-    }
-  },
-  watch: {
-    data() {
-      console.log('todolist data changed')
-    }
+    TodoItem
   }
 }
 </script>
 
-<style>
-</style>
+<style></style>
