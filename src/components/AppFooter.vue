@@ -3,12 +3,11 @@
     <div class="content has-text-centered">
       <p>
         <strong>Yet Another Vue Todo</strong>
-        by oliverne@gmail.com
+        by <a href="https://github.com/oliverne" target="_blank">oliverne</a>
       </p>
       <a
         href="https://github.com/oliverne/yet-another-vue-todo"
         target="_blank"
-        onclick="return false;"
         class="icon"
         ><i class="fa fa-github"></i
       ></a>
