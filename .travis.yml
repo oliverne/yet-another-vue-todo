@@ -2,7 +2,6 @@ language: node_js
 node_js:
   - lts/*
 cache: yarn
-if: tag IS present
 install:
   - yarn install
 script:
@@ -15,3 +14,6 @@ deploy:
   token: '$GITHUB_TOKEN'
   target_branch: gh-pages
   local_dir: dist
+branches:
+  only:
+    - master
