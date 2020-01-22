@@ -18,7 +18,7 @@
           <button
             :class="{ 'is-loading': loading }"
             :disabled="loading"
-            class="button is-primary"
+            class="button is-danger "
             @click="addTodo"
           >
             Enter
@@ -40,7 +40,7 @@ export default {
   },
   data() {
     return {
-      newTodo: '' //reactuve data
+      newTodo: ''
     }
   },
   methods: {

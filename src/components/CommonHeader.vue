@@ -39,13 +39,15 @@ export default {
 }
 </script>
 
-<style>
-.is-unique {
-  background-image: linear-gradient(
-    to bottom,
-    #abffef 2%,
-    #3894ff 60%,
-    #3894ff 100%
-  );
+<style scoped>
+.is-bg-header {
+  background: url(/img/bg-header.jpg) no-repeat center 10%;
+  background-size: cover;
+}
+.title, .subtitle {
+  color: #fff;
+}
+.title {
+  padding: 0.5em 0 0 0;
 }
 </style>

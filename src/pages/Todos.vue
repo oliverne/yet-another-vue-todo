@@ -1,9 +1,10 @@
 <template>
   <div class="todos">
     <common-header
+      type="bg-header"
       :bold="true"
       title="Yet Another Vue Todo"
-      sub-title="Just Example!"
+      sub-title="Working Example!"
     >
       <todo-form :loading="loading" @newTodoAdded="addTodo"></todo-form>
     </common-header>

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "echo \"Please run 'yarn dev' after 'yarn install'\"",
+    "start": "yarn build && npx serve dist",
     "dev": "parcel public/index.html -p 8000",
     "build": "parcel build public/index.html --public-url ./"
   },
