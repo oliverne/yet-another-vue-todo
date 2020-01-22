@@ -5,7 +5,8 @@
   "scripts": {
     "start": "yarn build && npx serve dist",
     "dev": "parcel public/index.html -p 8000",
-    "build": "parcel build public/index.html --public-url ./"
+    "build": "parcel build public/index.html --public-url ./",
+    "test": "jest"
   },
   "dependencies": {
     "consola": "2.11.3",
@@ -15,7 +16,33 @@
   },
   "devDependencies": {
     "@vue/component-compiler-utils": "3.1.1",
+    "@vue/test-utils": "^1.0.0-beta.31",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^25.1.0",
     "parcel-bundler": "1.12.4",
+    "vue-jest": "4.0.0-beta.2",
     "vue-template-compiler": "2.6.11"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      ".*\\.(vue)$": "vue-jest"
+    },
+    "collectCoverage": false,
+    "collectCoverageFrom": [
+      "**/*.{js,vue}",
+      "!**/node_modules/**"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/coverage/",
+      "<rootDir>/dist/",
+      "<rootDir>/public/"
+    ]
   }
 }
