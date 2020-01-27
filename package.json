@@ -12,12 +12,15 @@
     "consola": "2.11.3",
     "vue": "2.6.11",
     "vue-hot-reload-api": "2.3.4",
-    "vue-router": "3.1.4"
+    "vue-router": "3.1.4",
+    "vuex": "^3.1.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.3",
     "@vue/component-compiler-utils": "3.1.1",
     "@vue/test-utils": "^1.0.0-beta.31",
     "babel-core": "^6.26.3",
+    "babel-jest": "^25.1.0",
     "babel-preset-env": "^1.7.0",
     "jest": "^25.1.0",
     "parcel-bundler": "1.12.4",
@@ -31,6 +34,7 @@
       "vue"
     ],
     "transform": {
+      ".*\\.(js)$": "babel-jest",
       ".*\\.(vue)$": "vue-jest"
     },
     "collectCoverage": false,
