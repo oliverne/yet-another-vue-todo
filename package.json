@@ -1,21 +1,37 @@
 {
   "name": "yet-another-vue-todo",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "author": {
+    "name": "oliverne",
+    "email": "oliverne@gmail.com",
+    "url": "https://github.com/oliverne"
+  },
+  "keywords": [
+    "vue",
+    "todo"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oliverne/yet-another-vue-todo.git"
+  },
+  "bugs": {
+    "url": "hhttps://github.com/oliverne/yet-another-vue-todo/issues"
+  },
+  "homepage": "https://oliverne.github.io/yet-another-vue-todo",
   "scripts": {
-    "start": "yarn build && npx serve dist",
+    "start": "npm run build && npx serve dist",
     "dev": "parcel public/index.html -p 8000",
     "build": "parcel build public/index.html --public-url ./"
   },
   "dependencies": {
-    "consola": "2.11.3",
-    "vue": "2.6.11",
+    "consola": "2.15.0",
+    "vue": "2.6.12",
     "vue-hot-reload-api": "2.3.4",
-    "vue-router": "3.1.4"
+    "vue-router": "3.4.9"
   },
   "devDependencies": {
-    "@vue/component-compiler-utils": "3.1.1",
+    "@vue/component-compiler-utils": "3.2.0",
     "parcel-bundler": "1.12.4",
-    "vue-template-compiler": "2.6.11"
+    "vue-template-compiler": "2.6.12"
   }
 }
